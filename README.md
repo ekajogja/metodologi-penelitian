@@ -28,6 +28,7 @@ Setiap metode disajikan dalam file Markdown terpisah, dilengkapi dengan diagram 
 - `metode-penelitian-empiris-kuantitatif.md`
 - `metode-penelitian-empiris-kualitatif.md`
 - `LICENSE`
+- `CODE_OF_CONDUCT.md`
 - `README.md`
 
 ## Cara Berkontribusi
