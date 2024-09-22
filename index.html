@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologi Penelitian</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .menu button {
+            margin: 10px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: #103780;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .menu button:hover {
+            background-color: #444;
+        }
+        .content {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        footer {
+            background-color: #103780;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Mermaid.js -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: false });
+    </script>
+</head>
+<body>
+    <h1>Metodologi Penelitian</h1>
+
+    <div class="menu">
+        <button onclick="loadFile('README.md')">Tentang</button>
+        <button onclick="loadFile('file1.md')">Metode Non-Empiris</button>
+        <button onclick="loadFile('file2.md')">Metode Empiris Kualitatif</button>
+        <button onclick="loadFile('file3.md')">Metode Empiris Kuantitatif</button>
+        <button onclick="loadFile('file4.md')">Kode Etik Kontributor</button>
+        <button onclick="loadFile('LICENSE')">Lisensi</button>
+    </div>
+
+    <div id="fileContent" class="content">Pilih dari menu untuk menampilkan konten.</div>
+
+    <footer>
+        <p>Lihat proyek ini atau berkontribusi di <a href="https://github.com/ekajogja/metodologi-penelitian" target="_blank">GitHub</a>. Dibuat dengan &#10084; untuk komunitas open source.</p>
+    </footer>
+
+    <script>
+        // tampilkan file markdown
+        async function loadFile(file) {
+            const fileContentElement = document.getElementById('fileContent');
+            fileContentElement.textContent = 'Memuat file...';
+
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const text = await response.text();
+                    // marked.js MD to HTML
+                    fileContentElement.innerHTML = marked.parse(text);
+                    
+                    renderMermaidDiagrams();
+                } else {
+                    fileContentElement.textContent = 'Gagal memuat file: ' + file;
+                }
+            } catch (error) {
+                fileContentElement.textContent = 'Terjadi kesalahan saat memuat file: ' + file;
+            }
+        }
+
+        // render Mermaid
+        function renderMermaidDiagrams() {
+            const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+            mermaidCodeBlocks.forEach((block, index) => {
+                const preElement = block.parentElement;
+                const codeContent = block.textContent;
+                
+                const mermaidContainer = document.createElement('div');
+                mermaidContainer.className = 'mermaid';
+                mermaidContainer.innerHTML = codeContent;
+
+                preElement.parentNode.replaceChild(mermaidContainer, preElement);
+            });
+
+            mermaid.init();
+        }
+    </script>
+</body>
+</html>
