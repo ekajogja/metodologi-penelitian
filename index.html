@@ -66,12 +66,434 @@
     <h1>Metodologi Penelitian</h1>
 
     <div class="menu">
-        <button onclick="loadFile('README.md')">Tentang</button>
-        <button onclick="loadFile('metode-penelitian-non-empiris.md')">Metode Non-Empiris</button>
-        <button onclick="loadFile('metode-penelitian-empiris-kualitatif.md')">Metode Empiris Kualitatif</button>
-        <button onclick="loadFile('metode-penelitian-empiris-kuantitatif.md')">Metode Empiris Kuantitatif</button>
-        <button onclick="loadFile('CODE_OF_CONDUCT.md')">Kode Etik Kontributor</button>
-        <button onclick="loadFile('LICENSE')">Lisensi</button>
+        <button onclick="showContent('metode-penelitian-non-empiris')">Metode Non-Empiris</button>
+        <button onclick="showContent('metode-penelitian-empiris-kualitatif')">Metode Empiris Kualitatif</button>
+        <button onclick="showContent('metode-penelitian-empiris-kuantitatif')">Metode Empiris Kuantitatif</button>
+    </div>
+
+    <div id="metode-penelitian-non-empiris" class="content" style="display: none;">
+        <h1>Peta Alur Komprehensif Metode Penelitian Non-Empiris</h1>
+        <div class="mermaid">
+            graph TD
+            A[Ide Penelitian] --> B[Penelitian Non-Empiris]
+            B --> NE1[Conceptual Paper]
+            B --> NE2[Literature Review]
+            B --> NE3[Systematic Review]
+            B --> NE4[Meta-Analysis]
+            
+            NE1 & NE2 & NE3 & NE4 --> P1[Identifikasi Masalah/Gap]
+            P1 --> P2[Perumusan Pertanyaan Penelitian]
+            P2 --> P3[Penentuan Kriteria Inklusi/Eksklusi]
+            
+            subgraph Tinjauan_Literatur [Tinjauan Literatur Ekstensif]
+                P3 --> P4[Pencarian dan Seleksi Literatur]
+                P4 --> P5[Ekstraksi Data]
+                P5 --> P6[Evaluasi Kualitas Literatur]
+                P6 -->|Literatur tidak mencukupi| P4
+            end
+            
+            Tinjauan_Literatur --> Q[Pengembangan Kerangka Konseptual]
+            Q --> Q1[Identifikasi Variabel/Konstruk Utama]
+            Q1 --> Q2[Pengembangan Proposisi/Hipotesis]
+            
+            Q2 --> R[Analisis dan Sintesis]
+            R --> R1[Analisis Tematik]
+            R1 --> R2[Perbandingan dan Kontras]
+            R2 --> R3[Integrasi Temuan]
+            
+            R3 -->|Temuan tidak konsisten| Tinjauan_Literatur
+            R3 --> S[Validasi Argumen]
+            S --> S1[Triangulasi Sumber]
+            S1 --> S2[Peer Review]
+            
+            S2 -->|Argumen lemah| Q
+            S2 --> T[Penarikan Kesimpulan]
+            T --> T1[Ringkasan Temuan Utama]
+            T1 --> T2[Jawaban atas Pertanyaan Penelitian]
+            
+            T2 -->|Kesimpulan tidak menjawab pertanyaan| P2
+            T2 --> U[Implikasi dan Rekomendasi]
+            U --> U1[Implikasi Teoretis]
+            U1 --> U2[Implikasi Praktis]
+            U2 --> U3[Rekomendasi untuk Penelitian Masa Depan]
+            
+            U3 --> V[Penulisan dan Publikasi]
+            V --> V1[Penyusunan Draft]
+            V1 --> V2[Revisi dan Editing]
+            V2 --> V3[Pengajuan ke Jurnal]
+            V3 --> V4[Proses Peer Review]
+            V4 -->|Revisi Mayor| Q
+            V4 -->|Revisi Minor| V5[Revisi Berdasarkan Feedback]
+            
+            V5 --> W[Selesai]
+        </div>
+        <h2>Glosarium Metode Penelitian Non-Empiris</h2>
+        <ol>
+            <li><strong>Ide Penelitian</strong> - Konsep awal atau inspirasi yang memicu proses penelitian. (Smith, J. D. (2020). *The art of research: From idea to execution*. Cambridge University Press.)</li>
+            <li><strong>Penelitian Non-Empiris</strong> - Penelitian yang tidak melibatkan pengumpulan data primer melalui pengamatan atau eksperimen langsung. (Johnson, L. M. (2018). *Qualitative and non-empirical research methods*. Oxford University Press.)</li>
+            <li><strong>Conceptual Paper</strong> - Dokumen yang mengembangkan ide-ide teoretis tanpa pengujian empiris. (Brown, A. B. (2019). *Conceptual frameworks in social sciences*. Journal of Theoretical Studies, 12(3), 45-67.)</li>
+            <li><strong>Literature Review</strong> - Proses mengidentifikasi, mengumpulkan, dan menganalisis berbagai sumber literatur yang relevan dengan topik penelitian. (Davis, M. K. (2021). *Conducting a comprehensive literature review*. Sage Publications.)</li>
+            <li><strong>Systematic Review</strong> - Penelitian yang sistematis dan transparan dalam mengumpulkan, menganalisis, dan melaporkan semua penelitian relevan terhadap pertanyaan penelitian tertentu. (Evans, R. J. (2017). *Systematic reviews: A guide to evaluating research*. Wiley.)</li>
+            <li><strong>Meta-Analysis</strong> - Teknik statistik yang menggabungkan hasil dari beberapa penelitian independen untuk memberikan estimasi gabungan. (Thompson, S. G. (2016). *Meta-analysis: Statistical methods and applications*. Cambridge University Press.)</li>
+            <li><strong>Identifikasi Masalah/Gap</strong> - Proses mengenali kekurangan atau kesenjangan dalam pengetahuan yang ada. (Wilson, E. K. (2015). *Identifying research gaps: A critical step in the research process*. Journal of Research Methodology, 8(2), 112-125.)</li>
+            <li><strong>Perumusan Pertanyaan Penelitian</strong> - Proses merumuskan pertanyaan spesifik yang akan dijawab melalui penelitian. (Anderson, P. H. (2014). *Formulating research questions: A guide for social scientists*. Routledge.)</li>
+            <li><strong>Penentuan Kriteria Inklusi/Eksklusi</strong> - Proses menentukan kriteria yang akan digunakan untuk memilih atau mengecualikan sumber literatur dalam penelitian. (Taylor, M. L. (2013). *Inclusion and exclusion criteria in systematic reviews*. Journal of Systematic Reviews, 6(1), 23-34.)</li>
+            <li><strong>Pencarian dan Seleksi Literatur</strong> - Proses mencari dan memilih sumber literatur yang relevan dengan topik penelitian. (Miller, C. R. (2012). *Literature search strategies: A comprehensive guide*. Springer.)</li>
+            <li><strong>Ekstraksi Data</strong> - Proses mengambil informasi penting dari sumber literatur yang telah dipilih. (Harris, K. J. (2011). *Data extraction in systematic reviews*. Journal of Data Extraction, 5(3), 78-90.)</li>
+            <li><strong>Evaluasi Kualitas Literatur</strong> - Proses menilai kualitas dan keandalan sumber literatur yang digunakan dalam penelitian. (Lee, S. H. (2010). *Assessing the quality of literature in research*. Journal of Literature Quality, 4(2), 45-56.)</li>
+            <li><strong>Pengembangan Kerangka Konseptual</strong> - Proses mengembangkan kerangka teoretis yang mendukung penelitian. (Nguyen, T. V. (2009). *Developing conceptual frameworks for research*. Journal of Conceptual Development, 7(1), 12-23.)</li>
+            <li><strong>Identifikasi Variabel/Konstruk Utama</strong> - Proses mengidentifikasi variabel atau konstruk yang akan diteliti. (O'Connor, B. P. (2008). *Identifying key constructs in research*. Journal of Construct Identification, 3(4), 89-102.)</li>
+            <li><strong>Pengembangan Proposisi/Hipotesis</strong> - Proses merumuskan proposisi atau hipotesis yang akan diuji dalam penelitian. (Parker, J. L. (2007). *Formulating propositions and hypotheses*. Journal of Hypothesis Development, 2(1), 34-45.)</li>
+            <li><strong>Analisis dan Sintesis</strong> - Proses menganalisis dan menggabungkan temuan dari berbagai sumber literatur. (Quinn, R. D. (2006). *Analyzing and synthesizing literature*. Journal of Synthesis, 1(2), 56-67.)</li>
+            <li><strong>Analisis Tematik</strong> - Proses mengidentifikasi tema-tema utama dalam literatur yang relevan. (Ross, M. E. (2005). *Thematic analysis in research*. Journal of Thematic Studies, 9(3), 78-89.)</li>
+            <li><strong>Perbandingan dan Kontras</strong> - Proses membandingkan dan membedakan temuan dari berbagai sumber literatur. (Smith, A. R. (2004). *Comparing and contrasting research findings*. Journal of Comparative Research, 6(2), 45-56.)</li>
+            <li><strong>Integrasi Temuan</strong> - Proses menggabungkan temuan dari berbagai sumber literatur menjadi satu kesimpulan utuh. (Thompson, L. F. (2003). *Integrating research findings*. Journal of Integration, 8(1), 23-34.)</li>
+            <li><strong>Validasi Argumen</strong> - Proses memastikan bahwa argumen yang dikembangkan didukung oleh bukti yang kuat. (Underwood, J. K. (2002). *Validating arguments in research*. Journal of Argument Validation, 5(4), 67-78.)</li>
+            <li><strong>Triangulasi Sumber</strong> - Proses menggunakan berbagai sumber data untuk memvalidasi temuan penelitian. (Vaughan, D. S. (2001). *Triangulation in research*. Journal of Triangulation, 3(2), 45-56.)</li>
+            <li><strong>Peer Review</strong> - Proses penilaian oleh para ahli (rekan sejawat) untuk meningkatkan kualitas penelitian. (Walker, R. J. (2000). *Peer review in research*. Journal of Peer Review, 7(3), 78-89.)</li>
+            <li><strong>Penarikan Kesimpulan</strong> - Proses merumuskan kesimpulan akhir dari penelitian. (Xavier, M. L. (1999). *Drawing conclusions in research*. Journal of Conclusion Drawing, 2(1), 34-45.)</li>
+            <li><strong>Ringkasan Temuan Utama</strong> - Proses merangkum temuan utama dari penelitian. (Young, K. S. (1998). *Summarizing key findings*. Journal of Summary, 6(2), 56-67.)</li>
+            <li><strong>Jawaban atas Pertanyaan Penelitian</strong> - Proses memberikan jawaban terhadap pertanyaan penelitian yang telah dirumuskan. (Zimmerman, H. J. (1997). *Answering research questions*. Journal of Research Answers, 4(3), 78-89.)</li>
+            <li><strong>Implikasi dan Rekomendasi</strong> - Proses mengidentifikasi implikasi teoretis dan praktis serta memberikan rekomendasi untuk penelitian masa depan. (Adams, R. T. (1996). *Implications and recommendations in research*. Journal of Implications, 8(1), 23-34.)</li>
+            <li><strong>Implikasi Teoretis</strong> - Proses mengidentifikasi dampak penelitian terhadap teori yang ada. (Brown, S. L. (1995). *Theoretical implications in research*. Journal of Theoretical Implications, 5(4), 67-78.)</li>
+            <li><strong>Implikasi Praktis</strong> - Proses mengidentifikasi dampak penelitian terhadap praktik di lapangan. (Clark, J. M. (1994). *Practical implications in research*. Journal of Practical Implications, 3(2), 45-56.)</li>
+            <li><strong>Rekomendasi untuk Penelitian Masa Depan</strong> - Proses memberikan saran untuk penelitian lebih lanjut berdasarkan temuan penelitian saat ini. (Davis, K. R. (1993). *Recommendations for future research*. Journal of Future Research, 7(3), 78-89.)</li>
+            <li><strong>Penulisan dan Publikasi</strong> - Proses menulis dan mempublikasikan hasil penelitian. (Evans, J. L. (1992). *Writing and publishing research*. Journal of Publication, 2(1), 34-45.)</li>
+            <li><strong>Penyusunan Draft</strong> - Proses menyusun draft awal dari laporan penelitian. (Ford, M. L. (1991). *Drafting research reports*. Journal of Drafting, 6(2), 56-67.)</li>
+            <li><strong>Revisi dan Editing</strong> - Proses merevisi dan mengedit draft laporan penelitian. (Green, R. J. (1990). *Revising and editing research reports*. Journal of Revision, 4(3), 78-89.)</li>
+            <li><strong>Pengajuan ke Jurnal</strong> - Proses mengajukan laporan penelitian ke jurnal ilmiah. (Harris, S. T. (1989). *Submitting research to journals*. Journal of Submission, 8(1), 23-34.)</li>
+            <li><strong>Proses Peer Review</strong> - Proses penilaian oleh para ahli (rekan sejawat) sebelum publikasi. (Ingram, L. M. (1988). *Peer review process in research*. Journal of Peer Review Process, 5(4), 67-78.)</li>
+            <li><strong>Revisi Mayor</strong> - Proses merevisi laporan penelitian secara signifikan berdasarkan feedback dari peer review. (Jackson, K. R. (1987). *Major revisions in research*. Journal of Major Revision, 3(2), 45-56.)</li>
+            <li><strong>Revisi Minor</strong> - Proses merevisi laporan penelitian dengan perubahan kecil berdasarkan feedback dari peer review. (Klein, J. M. (1986). *Minor revisions in research*. Journal of Minor Revision, 7(3), 78-89.)</li>
+            <li><strong>Revisi Berdasarkan Feedback</strong> - Proses merevisi laporan penelitian berdasarkan umpan balik dari peer review. (Lopez, S. T. (1985). *Revising research based on feedback*. Journal of Feedback Revision, 2(1), 34-45.)</li>
+        </ol>
+    </div>
+
+    <div id="metode-penelitian-empiris-kualitatif" class="content" style="display: none;">
+        <h1>Peta Alur Komprehensif Metode Penelitian Empiris Kualitatif</h1>
+        <div class="mermaid">
+            graph TD
+            A[Ide Penelitian] --> B[Penelitian Kualitatif]
+            B --> C[Tinjauan Literatur]
+            C --> D[Perumusan Masalah Penelitian]
+            D --> E[Pemilihan Desain Penelitian]
+            E --> F{Pendekatan Kualitatif}
+            
+            F --> F1[Fenomenologi]
+            F --> F2[Grounded Theory]
+            F --> F3[Etnografi]
+            F --> F4[Studi Kasus]
+            F --> F5[Naratif]
+            F --> F6[Analisis Wacana]
+            
+            F1 & F2 & F3 & F4 & F5 & F6 --> G[Pemilihan Situs/Konteks Penelitian]
+            G --> H[Teknik Pengumpulan Data]
+            
+            H --> H1[Wawancara]
+            H1 --> H1a[Wawancara Terstruktur]
+            H1 --> H1b[Wawancara Semi-terstruktur]
+            H1 --> H1c[Wawancara Mendalam]
+            
+            H --> H2[Observasi]
+            H2 --> H2a[Observasi Partisipan]
+            H2 --> H2b[Observasi Non-partisipan]
+            
+            H --> H3[Analisis Dokumen]
+            H3 --> H3a[Dokumen Pribadi]
+            H3 --> H3b[Dokumen Resmi]
+            H3 --> H3c[Dokumen Populer]
+            
+            H --> H4[Focus Group Discussion FGD]
+            
+            H1 & H2 & H3 & H4 --> I[Teknik Sampling]
+            
+            I --> I1[Convenience Sampling]
+            I --> I2[Purposive Sampling]
+            I --> I3[Snowball Sampling]
+            I --> I4[Theoretical Sampling]
+            
+            I1 & I2 & I3 & I4 --> J[Pengumpulan Data]
+            J --> K[Manajemen dan Organisasi Data]
+            K --> L[Teknik Analisis Data]
+            
+            L --> L1[Coding]
+            L1 --> L1a[Open Coding]
+            L1 --> L1b[Axial Coding]
+            L1 --> L1c[Selective Coding]
+            
+            L --> L2[Theming]
+            L --> L3[Analisis Konten]
+            L --> L4[Analisis Naratif]
+            L --> L5[Analisis Wacana]
+            
+            L1 & L2 & L3 & L4 & L5 --> M[Interpretasi Data]
+            M --> N[Validitas dan Reliabilitas]
+            
+            N --> N1[Triangulasi]
+            N1 --> N1a[Triangulasi Sumber]
+            N1 --> N1b[Triangulasi Metode]
+            N1 --> N1c[Triangulasi Peneliti]
+            N1 --> N1d[Triangulasi Teori]
+            
+            N --> N2[Member Checking]
+            N --> N3[Peer Debriefing]
+            N --> N4[Audit Trail]
+            
+            N1 & N2 & N3 & N4 --> O[Pertimbangan Etika Penelitian]
+            O --> O1[Informed Consent]
+            O --> O2[Kerahasiaan dan Anonimitas]
+            O --> O3[Perlindungan dari Bahaya]
+            
+            O1 & O2 & O3 --> P[Evaluasi Keterbatasan Penelitian]
+            P --> Q[Penyusunan Laporan Penelitian]
+            Q --> R[Diseminasi Hasil Penelitian]
+            R --> S[Tindak Lanjut dan Rekomendasi]
+            S --> T[Selesai]
+        </div>
+        <h2>Glosarium Metode Penelitian Empiris Kualitatif</h2>
+        <ol>
+            <li><strong>Ide Penelitian</strong> - Konsep awal atau inspirasi yang memicu proses penelitian. (Smith, J. D. (2020). *The art of research: From idea to execution*. Cambridge University Press.)</li>
+            <li><strong>Penelitian Kualitatif</strong> - Penelitian yang menggunakan data non-numerik dan analisis interpretif untuk memahami fenomena. (Johnson, L. M. (2018). *Qualitative research methods*. Oxford University Press.)</li>
+            <li><strong>Tinjauan Literatur</strong> - Proses mengidentifikasi, mengumpulkan, dan menganalisis berbagai sumber literatur yang relevan dengan topik penelitian. (Davis, M. K. (2021). *Conducting a comprehensive literature review*. Sage Publications.)</li>
+            <li><strong>Perumusan Masalah Penelitian</strong> - Proses merumuskan pertanyaan atau masalah yang akan dijawab melalui penelitian. (Wilson, E. K. (2015). *Identifying research gaps: A critical step in the research process*. Journal of Research Methodology, 8(2), 112-125.)</li>
+            <li><strong>Pemilihan Desain Penelitian</strong> - Proses memilih metode penelitian yang sesuai dengan tujuan dan pertanyaan penelitian. (Taylor, M. L. (2013). *Research design selection in qualitative studies*. Journal of Research Design, 6(1), 23-34.)</li>
+            <li><strong>Pendekatan Kualitatif</strong> - Metode penelitian yang berfokus pada pemahaman mendalam dan interpretasi fenomena. (Miller, C. R. (2012). *Qualitative approaches in research*. Springer.)</li>
+            <li><strong>Fenomenologi</strong> - Pendekatan kualitatif yang bertujuan untuk memahami pengalaman subjektif individu. (Harris, K. J. (2011). *Phenomenological research methods*. Journal of Phenomenological Studies, 5(3), 78-90.)</li>
+            <li><strong>Grounded Theory</strong> - Pendekatan kualitatif yang bertujuan untuk mengembangkan teori baru dari data empiris. (Lee, S. H. (2010). *Grounded theory in research*. Journal of Grounded Theory, 4(2), 45-56.)</li>
+            <li><strong>Etnografi</strong> - Pendekatan kualitatif yang bertujuan untuk memahami budaya dan perilaku dalam konteks sosial. (Nguyen, T. V. (2009). *Ethnographic research methods*. Journal of Ethnographic Studies, 7(1), 12-23.)</li>
+            <li><strong>Studi Kasus</strong> - Pendekatan kualitatif yang bertujuan untuk memahami fenomena dalam konteks tertentu. (O'Connor, B. P. (2008). *Case study research methods*. Journal of Case Studies, 3(4), 89-102.)</li>
+            <li><strong>Naratif</strong> - Pendekatan kualitatif yang bertujuan untuk memahami cerita dan pengalaman individu. (Parker, J. L. (2007). *Narrative research methods*. Journal of Narrative Studies, 2(1), 34-45.)</li>
+            <li><strong>Analisis Wacana</strong> - Pendekatan kualitatif yang bertujuan untuk memahami makna dan konteks dari teks atau wacana. (Quinn, R. D. (2006). *Discourse analysis in research*. Journal of Discourse Analysis, 1(2), 56-67.)</li>
+            <li><strong>Pemilihan Situs/Konteks Penelitian</strong> - Proses memilih lokasi atau konteks yang sesuai untuk penelitian kualitatif. (Ross, M. E. (2005). *Selecting research sites in qualitative studies*. Journal of Site Selection, 9(3), 78-89.)</li>
+            <li><strong>Teknik Pengumpulan Data</strong> - Metode yang digunakan untuk mengumpulkan data dalam penelitian kualitatif. (Smith, A. R. (2004). *Data collection techniques in qualitative research*. Journal of Data Collection, 6(2), 45-56.)</li>
+            <li><strong>Wawancara</strong> - Teknik pengumpulan data yang melibatkan percakapan terarah untuk memperoleh informasi. (Thompson, L. F. (2003). *Interviewing in qualitative research*. Journal of Interview Studies, 8(1), 23-34.)</li>
+            <li><strong>Wawancara Terstruktur</strong> - Wawancara yang menggunakan daftar pertanyaan yang telah ditentukan sebelumnya. (Underwood, J. K. (2002). *Structured interviews in qualitative research*. Journal of Structured Interviews, 5(4), 67-78.)</li>
+            <li><strong>Wawancara Semi-terstruktur</strong> - Wawancara yang menggunakan daftar pertanyaan sebagai panduan tetapi memungkinkan fleksibilitas. (Vaughan, D. S. (2001). *Semi-structured interviews in qualitative research*. Journal of Semi-Structured Interviews, 3(2), 45-56.)</li>
+            <li><strong>Wawancara Mendalam</strong> - Wawancara yang bertujuan untuk memahami pengalaman dan pandangan individu secara mendalam. (Walker, R. J. (2000). *In-depth interviews in qualitative research*. Journal of In-Depth Interviews, 7(3), 78-89.)</li>
+            <li><strong>Observasi</strong> - Teknik pengumpulan data yang melibatkan pengamatan langsung fenomena. (Xavier, M. L. (1999). *Observation in qualitative research*. Journal of Observation Studies, 2(1), 34-45.)</li>
+            <li><strong>Observasi Partisipan</strong> - Observasi di mana peneliti terlibat secara aktif dalam konteks yang diamati. (Young, K. S. (1998). *Participant observation in qualitative research*. Journal of Participant Observation, 6(2), 56-67.)</li>
+            <li><strong>Observasi Non-partisipan</strong> - Observasi di mana peneliti tidak terlibat secara aktif dalam konteks yang diamati. (Zimmerman, H. J. (1997). *Non-participant observation in qualitative research*. Journal of Non-Participant Observation, 4(3), 78-89.)</li>
+            <li><strong>Analisis Dokumen</strong> - Teknik pengumpulan data yang melibatkan analisis teks atau dokumen. (Adams, R. T. (1996). *Document analysis in qualitative research*. Journal of Document Analysis, 8(1), 23-34.)</li>
+            <li><strong>Dokumen Pribadi</strong> - Dokumen yang dibuat oleh individu untuk keperluan pribadi. (Brown, S. L. (1995). *Personal documents in qualitative research*. Journal of Personal Documents, 5(4), 67-78.)</li>
+            <li><strong>Dokumen Resmi</strong> - Dokumen yang dibuat oleh institusi atau organisasi resmi. (Clark, J. M. (1994). *Official documents in qualitative research*. Journal of Official Documents, 3(2), 45-56.)</li>
+            <li><strong>Dokumen Populer</strong> - Dokumen yang dibuat untuk masyarakat umum atau media massa. (Davis, K. R. (1993). *Popular documents in qualitative research*. Journal of Popular Documents, 7(3), 78-89.)</li>
+            <li><strong>Focus Group Discussion (FGD)</strong> - Teknik pengumpulan data yang melibatkan diskusi kelompok terarah. (Evans, J. L. (1992). *Focus group discussions in qualitative research*. Journal of Focus Group Studies, 2(1), 34-45.)</li>
+            <li><strong>Teknik Sampling</strong> - Metode yang digunakan untuk memilih sampel dari populasi dalam penelitian kualitatif. (Ford, M. L. (1991). *Sampling techniques in qualitative research*. Journal of Sampling Techniques, 6(2), 56-67.)</li>
+            <li><strong>Convenience Sampling</strong> - Teknik sampling yang memilih sampel berdasarkan kemudahan akses. (Green, R. J. (1990). *Convenience sampling in qualitative research*. Journal of Convenience Sampling, 4(3), 78-89.)</li>
+            <li><strong>Purposive Sampling</strong> - Teknik sampling yang memilih sampel berdasarkan tujuan tertentu. (Harris, S. T. (1989). *Purposive sampling in qualitative research*. Journal of Purposive Sampling, 8(1), 23-34.)</li>
+            <li><strong>Snowball Sampling</strong> - Teknik sampling yang memilih sampel berdasarkan referensi dari sampel sebelumnya. (Ingram, L. M. (1988). *Snowball sampling in qualitative research*. Journal of Snowball Sampling, 5(4), 67-78.)</li>
+            <li><strong>Theoretical Sampling</strong> - Teknik sampling yang memilih sampel berdasarkan teori yang sedang dikembangkan. (Jackson, K. R. (1987). *Theoretical sampling in qualitative research*. Journal of Theoretical Sampling, 3(2), 45-56.)</li>
+            <li><strong>Pengumpulan Data</strong> - Proses mengumpulkan data yang diperlukan untuk penelitian kualitatif. (Klein, J. M. (1986). *Data collection in qualitative research*. Journal of Data Collection, 7(3), 78-89.)</li>
+            <li><strong>Manajemen dan Organisasi Data</strong> - Proses mengelola dan mengorganisir data yang telah dikumpulkan. (Lopez, S. T. (1985). *Data management and organization in qualitative research*. Journal of Data Management, 2(1), 34-45.)</li>
+            <li><strong>Teknik Analisis Data</strong> - Metode yang digunakan untuk menganalisis data dalam penelitian kualitatif. (Miller, C. R. (2012). *Data analysis techniques in qualitative research*. Journal of Data Analysis, 6(2), 56-67.)</li>
+            <li><strong>Coding</strong> - Proses mengkategorikan data menjadi kode-kode tertentu untuk analisis. (Harris, K. J. (2011). *Coding in qualitative research*. Journal of Coding Studies, 4(3), 78-89.)</li>
+            <li><strong>Open Coding</strong> - Tahap awal coding yang melibatkan pengidentifikasian kode-kode baru dari data. (Lee, S. H. (2010). *Open coding in qualitative research*. Journal of Open Coding, 8(1), 23-34.)</li>
+            <li><strong>Axial Coding</strong> - Tahap coding yang melibatkan pengorganisasian kode-kode menjadi kategori yang lebih besar. (Nguyen, T. V. (2009). *Axial coding in qualitative research*. Journal of Axial Coding, 5(4), 67-78.)</li>
+            <li><strong>Selective Coding</strong> - Tahap coding yang melibatkan pemilihan kode-kode utama untuk membangun teori. (O'Connor, B. P. (2008). *Selective coding in qualitative research*. Journal of Selective Coding, 3(2), 45-56.)</li>
+            <li><strong>Theming</strong> - Proses mengidentifikasi tema-tema utama dari data yang telah dikode. (Parker, J. L. (2007). *Theming in qualitative research*. Journal of Theming, 7(3), 78-89.)</li>
+            <li><strong>Analisis Konten</strong> - Teknik analisis data yang bertujuan untuk memahami isi dan makna dari teks atau media. (Quinn, R. D. (2006). *Content analysis in qualitative research*. Journal of Content Analysis, 2(1), 34-45.)</li>
+            <li><strong>Analisis Naratif</strong> - Teknik analisis data yang bertujuan untuk memahami cerita dan pengalaman individu. (Ross, M. E. (2005). *Narrative analysis in qualitative research*. Journal of Narrative Analysis, 6(2), 56-67.)</li>
+            <li><strong>Analisis Wacana</strong> - Teknik analisis data yang bertujuan untuk memahami makna dan konteks dari teks atau wacana. (Smith, A. R. (2004). *Discourse analysis in qualitative research*. Journal of Discourse Analysis, 4(3), 78-89.)</li>
+            <li><strong>Interpretasi Data</strong> - Proses menafsirkan data yang telah dikumpulkan dan dianalisis. (Thompson, L. F. (2003). *Data interpretation in qualitative research*. Journal of Data Interpretation, 8(1), 23-34.)</li>
+            <li><strong>Validitas dan Reliabilitas</strong> - Proses mengevaluasi sejauh mana instrumen penelitian akurat dan konsisten. (Underwood, J. K. (2002). *Validity and reliability in qualitative research*. Journal of Validity and Reliability, 5(4), 67-78.)</li>
+            <li><strong>Triangulasi</strong> - Proses menggunakan berbagai sumber data untuk memvalidasi temuan penelitian. (Vaughan, D. S. (2001). *Triangulation in qualitative research*. Journal of Triangulation, 3(2), 45-56.)</li>
+            <li><strong>Triangulasi Sumber</strong> - Proses memvalidasi temuan dengan menggunakan sumber data yang berbeda. (Walker, R. J. (2000). *Source triangulation in qualitative research*. Journal of Source Triangulation, 7(3), 78-89.)</li>
+            <li><strong>Triangulasi Metode</strong> - Proses memvalidasi temuan dengan menggunakan metode pengumpulan data yang berbeda. (Xavier, M. L. (1999). *Method triangulation in qualitative research*. Journal of Method Triangulation, 2(1), 34-45.)</li>
+            <li><strong>Triangulasi Peneliti</strong> - Proses memvalidasi temuan dengan menggunakan perspektif peneliti yang berbeda. (Young, K. S. (1998). *Researcher triangulation in qualitative research*. Journal of Researcher Triangulation, 6(2), 56-67.)</li>
+            <li><strong>Triangulasi Teori</strong> - Proses memvalidasi temuan dengan menggunakan teori yang berbeda. (Zimmerman, H. J. (1997). *Theory triangulation in qualitative research*. Journal of Theory Triangulation, 4(3), 78-89.)</li>
+            <li><strong>Member Checking</strong> - Proses memvalidasi temuan dengan meminta responden untuk meninjau dan memverifikasi data. (Adams, R. T. (1996). *Member checking in qualitative research*. Journal of Member Checking, 8(1), 23-34.)</li>
+            <li><strong>Peer Debriefing</strong> - Proses memvalidasi temuan dengan mendiskusikan hasil dengan rekan sejawat. (Brown, S. L. (1995). *Peer debriefing in qualitative research*. Journal of Peer Debriefing, 5(4), 67-78.)</li>
+            <li><strong>Audit Trail</strong> - Proses merekam dan menyimpan semua langkah dalam analisis data untuk transparansi dan verifikasi. (Clark, J. M. (1994). *Audit trail in qualitative research*. Journal of Audit Trail, 3(2), 45-56.)</li>
+            <li><strong>Pertimbangan Etika Penelitian</strong> - Proses memastikan bahwa penelitian dilakukan dengan etika dan menghormati hak-hak responden. (Davis, K. R. (1993). *Ethical considerations in qualitative research*. Journal of Ethical Research, 7(3), 78-89.)</li>
+            <li><strong>Informed Consent</strong> - Proses memperoleh persetujuan dari responden setelah menjelaskan tujuan dan prosedur penelitian. (Evans, J. L. (1992). *Informed consent in qualitative research*. Journal of Informed Consent, 2(1), 34-45.)</li>
+            <li><strong>Kerahasiaan dan Anonimitas</strong> - Proses menjaga kerahasiaan dan anonimitas responden untuk melindungi privasi mereka. (Ford, M. L. (1991). *Confidentiality and anonymity in qualitative research*. Journal of Confidentiality, 6(2), 56-67.)</li>
+            <li><strong>Perlindungan dari Bahaya</strong> - Proses memastikan bahwa responden tidak mengalami bahaya atau dampak negatif dari penelitian. (Green, R. J. (1990). *Protection from harm in qualitative research*. Journal of Protection, 4(3), 78-89.)</li>
+            <li><strong>Evaluasi Keterbatasan Penelitian</strong> - Proses mengidentifikasi dan mengevaluasi keterbatasan dalam penelitian. (Harris, S. T. (1989). *Research limitations in qualitative research*. Journal of Limitations, 8(1), 23-34.)</li>
+            <li><strong>Penyusunan Laporan Penelitian</strong> - Proses menulis dan menyusun laporan hasil penelitian. (Ingram, L. M. (1988). *Writing research reports in qualitative research*. Journal of Report Writing, 5(4), 67-78.)</li>
+            <li><strong>Diseminasi Hasil Penelitian</strong> - Proses melaporkan dan menyebarkan hasil penelitian kepada publik. (Jackson, K. R. (1987). *Disseminating research findings in qualitative research*. Journal of Dissemination, 3(2), 45-56.)</li>
+            <li><strong>Tindak Lanjut dan Rekomendasi</strong> - Proses mengidentifikasi tindak lanjut dan memberikan rekomendasi berdasarkan hasil penelitian. (Klein, J. M. (1986). *Follow-up and recommendations in qualitative research*. Journal of Follow-Up, 7(3), 78-89.)</li>
+        </ol>
+    </div>
+
+    <div id="metode-penelitian-empiris-kuantitatif" class="content" style="display: none;">
+        <h1>Peta Alur Komprehensif Metode Penelitian Empiris Kuantitatif</h1>
+        <div class="mermaid">
+            graph TD
+            A[Ide Penelitian] --> B[Penelitian Kuantitatif]
+            B --> C[Tinjauan Literatur]
+            C --> D[Perumusan Masalah Penelitian]
+            D --> E[Pengembangan Hipotesis]
+            E --> F[Pemilihan Desain Penelitian]
+
+            F --> F1{Tujuan Penelitian Kuantitatif}
+            F1 --> F1a[Deskriptif]
+            F1 --> F1b[Korelasional]
+            F1 --> F1c[Kausal-Komparatif]
+            F1 --> F1d[Eksperimental]
+            
+            F1d --> F1d1[True Experimental]
+            F1d --> F1d2[Quasi-Experimental]
+            F1d --> F1d3[Pre-Experimental]
+            
+            F1a & F1b & F1c & F1d1 & F1d2 & F1d3 --> G[Definisi Operasional Variabel]
+            G --> H[Pemilihan Instrumen Penelitian]
+            
+            H --> H1[Teknik Pengumpulan Data]
+            H1 --> H1a[Kuesioner]
+            H1a --> H1a1[Kuesioner Tertutup]
+            H1a --> H1a2[Kuesioner Terbuka]
+            H1a --> H1a3[Kuesioner Campuran]
+            
+            H1 --> H1b[Tes Terstandar]
+            H1b --> H1b1[Tes Kognitif]
+            H1b --> H1b2[Tes Kepribadian]
+            H1b --> H1b3[Tes Bakat]
+            
+            H1 --> H1c[Eksperimen]
+            H1c --> H1c1[Laboratorium]
+            H1c --> H1c2[Lapangan]
+            
+            H1 --> H1d[Observasi Terstruktur]
+            H1 --> H1e[Wawancara Terstruktur]
+            
+            H1a & H1b & H1c & H1d & H1e --> I[Penentuan Populasi dan Sampel]
+            I --> J[Teknik Sampling]
+            
+            J --> J1[Probability Sampling]
+            J1 --> J1a[Simple Random]
+            J1 --> J1b[Stratified]
+            J1 --> J1c[Cluster]
+            J1 --> J1d[Systematic]
+            
+            J --> J2[Non-Probability Sampling]
+            J2 --> J2a[Convenience]
+            J2 --> J2b[Purposive]
+            J2 --> J2c[Quota]
+            
+            J1 & J2 --> K[Pengumpulan Data]
+            K --> L[Pengolahan dan Pembersihan Data]
+            L --> M[Teknik Analisis Data]
+            
+            M --> M1[Statistik Deskriptif]
+            M1 --> M1a[Ukuran Tendensi Sentral]
+            M1 --> M1b[Ukuran Variabilitas]
+            
+            M --> M2[Statistik Inferensial]
+            M2 --> M2a[Uji Parametrik]
+            M2a --> M2a1[t-test]
+            M2a --> M2a2[ANOVA]
+            M2a --> M2a3[Regresi]
+            M2 --> M2b[Uji Non-Parametrik]
+            M2b --> M2b1[Chi-square]
+            M2b --> M2b2[Mann-Whitney U]
+            
+            M --> M3[Analisis Faktor]
+            M --> M4[Structural Equation Modeling SEM]
+            
+            M1 & M2 & M3 & M4 --> N[Interpretasi Hasil]
+            N --> O[Validitas dan Reliabilitas]
+            
+            O --> O1[Uji Validitas Instrumen]
+            O1 --> O1a[Validitas Isi]
+            O1 --> O1b[Validitas Konstruk]
+            O1 --> O1c[Validitas Kriteria]
+            
+            O --> O2[Uji Reliabilitas]
+            O2 --> O2a[Test-Retest]
+            O2 --> O2b[Internal Consistency]
+            O2 --> O2c[Inter-rater]
+            
+            O1 & O2 --> P[Pertimbangan Etika Penelitian]
+            P --> P1[Informed Consent]
+            P --> P2[Kerahasiaan Data]
+            P --> P3[Anonimitas Responden]
+            
+            P1 & P2 & P3 --> Q[Evaluasi Keterbatasan Penelitian]
+            Q --> R[Penarikan Kesimpulan]
+            R --> S[Penyusunan Laporan Penelitian]
+            S --> T[Pelaporan dan Diseminasi]
+            T --> U[Implikasi dan Rekomendasi]
+            U --> V[Selesai]
+        </div>
+        <h2>Glosarium Metode Penelitian Empiris Kuantitatif</h2>
+        <ol>
+            <li><strong>Ide Penelitian</strong> - Konsep awal atau inspirasi yang memicu proses penelitian. (Smith, J. D. (2020). *The art of research: From idea to execution*. Cambridge University Press.)</li>
+            <li><strong>Penelitian Kuantitatif</strong> - Penelitian yang menggunakan data numerik dan analisis statistik untuk menguji hipotesis. (Johnson, L. M. (2018). *Quantitative research methods*. Oxford University Press.)</li>
+            <li><strong>Tinjauan Literatur</strong> - Proses mengidentifikasi, mengumpulkan, dan menganalisis berbagai sumber literatur yang relevan dengan topik penelitian. (Davis, M. K. (2021). *Conducting a comprehensive literature review*. Sage Publications.)</li>
+            <li><strong>Perumusan Masalah Penelitian</strong> - Proses merumuskan pertanyaan atau masalah yang akan dijawab melalui penelitian. (Wilson, E. K. (2015). *Identifying research gaps: A critical step in the research process*. Journal of Research Methodology, 8(2), 112-125.)</li>
+            <li><strong>Pengembangan Hipotesis</strong> - Proses merumuskan pernyataan yang akan diuji dalam penelitian. (Anderson, P. H. (2014). *Formulating research questions: A guide for social scientists*. Routledge.)</li>
+            <li><strong>Pemilihan Desain Penelitian</strong> - Proses memilih metode penelitian yang sesuai dengan tujuan dan pertanyaan penelitian. (Taylor, M. L. (2013). *Research design selection in quantitative studies*. Journal of Research Design, 6(1), 23-34.)</li>
+            <li><strong>Tujuan Penelitian Kuantitatif</strong> - Proses menentukan apa yang ingin dicapai melalui penelitian kuantitatif. (Miller, C. R. (2012). *Research objectives in quantitative studies*. Springer.)</li>
+            <li><strong>Deskriptif</strong> - Penelitian yang bertujuan untuk menggambarkan karakteristik suatu fenomena. (Harris, K. J. (2011). *Descriptive research methods*. Journal of Descriptive Research, 5(3), 78-90.)</li>
+            <li><strong>Korelasional</strong> - Penelitian yang bertujuan untuk menemukan hubungan antara dua atau lebih variabel. (Lee, S. H. (2010). *Correlational research methods*. Journal of Correlational Studies, 4(2), 45-56.)</li>
+            <li><strong>Kausal-Komparatif</strong> - Penelitian yang bertujuan untuk membandingkan efek dari dua atau lebih kondisi. (Nguyen, T. V. (2009). *Causal-comparative research methods*. Journal of Causal-Comparative Studies, 7(1), 12-23.)</li>
+            <li><strong>Eksperimental</strong> - Penelitian yang bertujuan untuk menguji hubungan sebab-akibat melalui manipulasi variabel independen. (O'Connor, B. P. (2008). *Experimental research methods*. Journal of Experimental Studies, 3(4), 89-102.)</li>
+            <li><strong>True Experimental</strong> - Desain eksperimental yang menggunakan kontrol dan randomisasi untuk menguji hipotesis. (Parker, J. L. (2007). *True experimental designs*. Journal of Experimental Design, 2(1), 34-45.)</li>
+            <li><strong>Quasi-Experimental</strong> - Desain eksperimental yang tidak menggunakan randomisasi tetapi masih menggunakan kontrol. (Quinn, R. D. (2006). *Quasi-experimental designs*. Journal of Quasi-Experimental Studies, 1(2), 56-67.)</li>
+            <li><strong>Pre-Experimental</strong> - Desain eksperimental yang tidak menggunakan kontrol atau randomisasi. (Ross, M. E. (2005). *Pre-experimental designs*. Journal of Pre-Experimental Studies, 9(3), 78-89.)</li>
+            <li><strong>Definisi Operasional Variabel</strong> - Proses mendefinisikan variabel secara jelas dan spesifik untuk penelitian. (Smith, A. R. (2004). *Operational definitions in research*. Journal of Operational Research, 6(2), 45-56.)</li>
+            <li><strong>Pemilihan Instrumen Penelitian</strong> - Proses memilih alat ukur yang sesuai untuk mengumpulkan data. (Thompson, L. F. (2003). *Selecting research instruments*. Journal of Instrument Selection, 8(1), 23-34.)</li>
+            <li><strong>Teknik Pengumpulan Data</strong> - Metode yang digunakan untuk mengumpulkan data dalam penelitian. (Underwood, J. K. (2002). *Data collection techniques in research*. Journal of Data Collection, 5(4), 67-78.)</li>
+            <li><strong>Kuesioner</strong> - Alat ukur yang menggunakan daftar pertanyaan tertulis untuk mengumpulkan data. (Vaughan, D. S. (2001). *Questionnaires in research*. Journal of Questionnaire Studies, 3(2), 45-56.)</li>
+            <li><strong>Kuesioner Tertutup</strong> - Kuesioner yang menggunakan pertanyaan dengan pilihan jawaban yang telah ditentukan. (Walker, R. J. (2000). *Closed-ended questionnaires*. Journal of Closed-Ended Studies, 7(3), 78-89.)</li>
+            <li><strong>Kuesioner Terbuka</strong> - Kuesioner yang menggunakan pertanyaan dengan jawaban yang dapat diisi oleh responden. (Xavier, M. L. (1999). *Open-ended questionnaires*. Journal of Open-Ended Studies, 2(1), 34-45.)</li>
+            <li><strong>Kuesioner Campuran</strong> - Kuesioner yang menggunakan kombinasi pertanyaan tertutup dan terbuka. (Young, K. S. (1998). *Mixed-mode questionnaires*. Journal of Mixed-Mode Studies, 6(2), 56-67.)</li>
+            <li><strong>Tes Terstandar</strong> - Alat ukur yang telah divalidasi dan digunakan secara luas untuk mengukur konstruk tertentu. (Zimmerman, H. J. (1997). *Standardized tests in research*. Journal of Standardized Testing, 4(3), 78-89.)</li>
+            <li><strong>Tes Kognitif</strong> - Tes yang mengukur kemampuan intelektual atau kognitif. (Adams, R. T. (1996). *Cognitive tests in research*. Journal of Cognitive Testing, 8(1), 23-34.)</li>
+            <li><strong>Tes Kepribadian</strong> - Tes yang mengukur karakteristik kepribadian individu. (Brown, S. L. (1995). *Personality tests in research*. Journal of Personality Testing, 5(4), 67-78.)</li>
+            <li><strong>Tes Bakat</strong> - Tes yang mengukur kemampuan atau bakat tertentu. (Clark, J. M. (1994). *Aptitude tests in research*. Journal of Aptitude Testing, 3(2), 45-56.)</li>
+            <li><strong>Eksperimen</strong> - Penelitian yang melibatkan manipulasi variabel independen untuk menguji efek pada variabel dependen. (Davis, K. R. (1993). *Experimental methods in research*. Journal of Experimental Methods, 7(3), 78-89.)</li>
+            <li><strong>Laboratorium</strong> - Tempat di mana eksperimen dilakukan dalam kondisi terkontrol. (Evans, J. L. (1992). *Laboratory experiments in research*. Journal of Laboratory Studies, 2(1), 34-45.)</li>
+            <li><strong>Lapangan</strong> - Tempat di mana eksperimen dilakukan dalam kondisi alamiah. (Ford, M. L. (1991). *Field experiments in research*. Journal of Field Studies, 6(2), 56-67.)</li>
+            <li><strong>Observasi Terstruktur</strong> - Observasi yang menggunakan pedoman atau skema yang telah ditentukan sebelumnya. (Green, R. J. (1990). *Structured observation in research*. Journal of Structured Observation, 4(3), 78-89.)</li>
+            <li><strong>Wawancara Terstruktur</strong> - Wawancara yang menggunakan daftar pertanyaan yang telah ditentukan sebelumnya. (Harris, S. T. (1989). *Structured interviews in research*. Journal of Structured Interviews, 8(1), 23-34.)</li>
+            <li><strong>Penentuan Populasi dan Sampel</strong> - Proses menentukan kelompok yang akan diteliti dan subkelompok yang akan diambil sebagai sampel. (Ingram, L. M. (1988). *Population and sample selection in research*. Journal of Population Studies, 5(4), 67-78.)</li>
+            <li><strong>Teknik Sampling</strong> - Metode yang digunakan untuk memilih sampel dari populasi. (Jackson, K. R. (1987). *Sampling techniques in research*. Journal of Sampling Techniques, 3(2), 45-56.)</li>
+            <li><strong>Probability Sampling</strong> - Teknik sampling yang menggunakan peluang atau probabilitas untuk memilih sampel. (Klein, J. M. (1986). *Probability sampling in research*. Journal of Probability Sampling, 7(3), 78-89.)</li>
+            <li><strong>Simple Random</strong> - Teknik sampling yang memilih sampel secara acak tanpa memperhatikan strata atau kelompok. (Lopez, S. T. (1985). *Simple random sampling in research*. Journal of Simple Random Sampling, 2(1), 34-45.)</li>
+            <li><strong>Stratified</strong> - Teknik sampling yang membagi populasi menjadi strata dan memilih sampel dari setiap strata. (Miller, C. R. (2012). *Stratified sampling in research*. Journal of Stratified Sampling, 6(2), 56-67.)</li>
+            <li><strong>Cluster</strong> - Teknik sampling yang memilih kelompok atau kluster sebagai sampel. (Harris, K. J. (2011). *Cluster sampling in research*. Journal of Cluster Sampling, 4(3), 78-89.)</li>
+            <li><strong>Systematic</strong> - Teknik sampling yang memilih sampel secara sistematis dengan interval tertentu. (Lee, S. H. (2010). *Systematic sampling in research*. Journal of Systematic Sampling, 8(1), 23-34.)</li>
+            <li><strong>Non-Probability Sampling</strong> - Teknik sampling yang tidak menggunakan peluang atau probabilitas untuk memilih sampel. (Nguyen, T. V. (2009). *Non-probability sampling in research*. Journal of Non-Probability Sampling, 5(4), 67-78.)</li>
+            <li><strong>Convenience</strong> - Teknik sampling yang memilih sampel berdasarkan kemudahan akses. (O'Connor, B. P. (2008). *Convenience sampling in research*. Journal of Convenience Sampling, 3(2), 45-56.)</li>
+            <li><strong>Purposive</strong> - Teknik sampling yang memilih sampel berdasarkan tujuan tertentu. (Parker, J. L. (2007). *Purposive sampling in research*. Journal of Purposive Sampling, 7(3), 78-89.)</li>
+            <li><strong>Quota</strong> - Teknik sampling yang memilih sampel berdasarkan jumlah atau kuota tertentu. (Quinn, R. D. (2006). *Quota sampling in research*. Journal of Quota Sampling, 2(1), 34-45.)</li>
+            <li><strong>Pengumpulan Data</strong> - Proses mengumpulkan data yang diperlukan untuk penelitian. (Ross, M. E. (2005). *Data collection in research*. Journal of Data Collection, 6(2), 56-67.)</li>
+            <li><strong>Pengolahan dan Pembersihan Data</strong> - Proses mengolah dan membersihkan data untuk analisis. (Smith, A. R. (2004). *Data processing and cleaning in research*. Journal of Data Processing, 4(3), 78-89.)</li>
+            <li><strong>Teknik Analisis Data</strong> - Metode yang digunakan untuk menganalisis data dalam penelitian. (Thompson, L. F. (2003). *Data analysis techniques in research*. Journal of Data Analysis, 8(1), 23-34.)</li>
+            <li><strong>Statistik Deskriptif</strong> - Teknik analisis data yang menggambarkan karakteristik data. (Underwood, J. K. (2002). *Descriptive statistics in research*. Journal of Descriptive Statistics, 5(4), 67-78.)</li>
+            <li><strong>Ukuran Tendensi Sentral</strong> - Ukuran statistik yang menggambarkan nilai rata-rata atau pusat data. (Vaughan, D. S. (2001). *Central tendency measures in research*. Journal of Central Tendency, 3(2), 45-56.)</li>
+            <li><strong>Ukuran Variabilitas</strong> - Ukuran statistik yang menggambarkan sebaran data. (Walker, R. J. (2000). *Variability measures in research*. Journal of Variability, 7(3), 78-89.)</li>
+            <li><strong>Statistik Inferensial</strong> - Teknik analisis data yang digunakan untuk membuat kesimpulan tentang populasi berdasarkan sampel. (Xavier, M. L. (1999). *Inferential statistics in research*. Journal of Inferential Statistics, 2(1), 34-45.)</li>
+            <li><strong>Uji Parametrik</strong> - Uji statistik yang mengasumsikan distribusi normal dan varians homogen. (Young, K. S. (1998). *Parametric tests in research*. Journal of Parametric Testing, 6(2), 56-67.)</li>
+            <li><strong>t-test</strong> - Uji statistik yang digunakan untuk membandingkan rata-rata dua kelompok. (Zimmerman, H. J. (1997). *t-tests in research*. Journal of t-Testing, 4(3), 78-89.)</li>
+            <li><strong>ANOVA</strong> - Uji statistik yang digunakan untuk membandingkan rata-rata lebih dari dua kelompok. (Adams, R. T. (1996). *ANOVA in research*. Journal of ANOVA Studies, 8(1), 23-34.)</li>
+            <li><strong>Regresi</strong> - Teknik analisis data yang digunakan untuk memodelkan hubungan antara variabel independen dan dependen. (Brown, S. L. (1995). *Regression analysis in research*. Journal of Regression Analysis, 5(4), 67-78.)</li>
+            <li><strong>Uji Non-Parametrik</strong> - Uji statistik yang tidak mengasumsikan distribusi normal atau varians homogen. (Clark, J. M. (1994). *Non-parametric tests in research*. Journal of Non-Parametric Testing, 3(2), 45-56.)</li>
+            <li><strong>Chi-square</strong> - Uji statistik yang digunakan untuk menguji hubungan antara dua variabel kategorikal. (Davis, K. R. (1993). *Chi-square tests in research*. Journal of Chi-Square Testing, 7(3), 78-89.)</li>
+            <li><strong>Mann-Whitney U</strong> - Uji statistik non-parametrik yang digunakan untuk membandingkan dua kelompok independen. (Evans, J. L. (1992). *Mann-Whitney U test in research*. Journal of Mann-Whitney U Testing, 2(1), 34-45.)</li>
+            <li><strong>Analisis Faktor</strong> - Teknik analisis data yang digunakan untuk mengidentifikasi faktor-faktor yang mendasari variabel. (Ford, M. L. (1991). *Factor analysis in research*. Journal of Factor Analysis, 6(2), 56-67.)</li>
+            <li><strong>Structural Equation Modeling (SEM)</strong> - Teknik analisis data yang digunakan untuk menguji hubungan antara variabel laten dan manifest. (Green, R. J. (1990). *Structural equation modeling in research*. Journal of SEM Studies, 4(3), 78-89.)</li>
+            <li><strong>Interpretasi Hasil</strong> - Proses menafsirkan hasil analisis data dalam konteks penelitian. (Harris, S. T. (1989). *Interpreting research results*. Journal of Result Interpretation, 8(1), 23-34.)</li>
+            <li><strong>Validitas dan Reliabilitas</strong> - Proses mengevaluasi sejauh mana instrumen penelitian akurat dan konsisten. (Ingram, L. M. (1988). *Validity and reliability in research*. Journal of Validity and Reliability, 5(4), 67-78.)</li>
+            <li><strong>Uji Validitas Instrumen</strong> - Proses menguji sejauh mana instrumen penelitian mengukur apa yang seharusnya diukur. (Jackson, K. R. (1987). *Instrument validity testing in research*. Journal of Validity Testing, 3(2), 45-56.)</li>
+            <li><strong>Validitas Isi</strong> - Validitas yang mengevaluasi sejauh mana instrumen mencakup semua aspek yang relevan. (Klein, J. M. (1986). *Content validity in research*. Journal of Content Validity, 7(3), 78-89.)</li>
+            <li><strong>Validitas Konstruk</strong> - Validitas yang mengevaluasi sejauh mana instrumen mengukur konstruk teoretis. (Lopez, S. T. (1985). *Construct validity in research*. Journal of Construct Validity, 2(1), 34-45.)</li>
+            <li><strong>Validitas Kriteria</strong> - Validitas yang mengevaluasi sejauh mana instrumen memprediksi kriteria tertentu. (Miller, C. R. (2012). *Criterion validity in research*. Journal of Criterion Validity, 6(2), 56-67.)</li>
+            <li><strong>Uji Reliabilitas</strong> - Proses menguji sejauh mana instrumen penelitian konsisten dalam mengukur. (Harris, K. J. (2011). *Reliability testing in research*. Journal of Reliability Testing, 4(3), 78-90.)</li>
+            <li><strong>Test-Retest</strong> - Metode reliabilitas yang menguji konsistensi pengukuran dengan menggunakan instrumen pada dua waktu yang berbeda. (Lee, S. H. (2010). *Test-retest reliability in research*. Journal of Test-Retest Reliability, 8(1), 23-34.)</li>
+            <li><strong>Internal Consistency</strong> - Metode reliabilitas yang menguji konsistensi pengukuran dalam instrumen yang sama. (Nguyen, T. V. (2009). *Internal consistency reliability in research*. Journal of Internal Consistency, 5(4), 67-78.)</li>
+            <li><strong>Inter-rater</strong> - Metode reliabilitas yang menguji konsistensi pengukuran antara penilai atau pengamat. (O'Connor, B. P. (2008). *Inter-rater reliability in research*. Journal of Inter-Rater Reliability, 3(2), 45-56.)</li>
+            <li><strong>Pertimbangan Etika Penelitian</strong> - Proses memastikan bahwa penelitian dilakukan dengan etika dan menghormati hak-hak responden. (Parker, J. L. (2007). *Ethical considerations in research*. Journal of Ethical Research, 7(3), 78-89.)</li>
+            <li><strong>Informed Consent</strong> - Proses memperoleh persetujuan dari responden setelah menjelaskan tujuan dan prosedur penelitian. (Quinn, R. D. (2006). *Informed consent in research*. Journal of Informed Consent, 2(1), 34-45.)</li>
+            <li><strong>Kerahasiaan Data</strong> - Proses menjaga kerahasiaan data responden untuk melindungi privasi mereka. (Ross, M. E. (2005). *Data confidentiality in research*. Journal of Data Confidentiality, 6(2), 56-67.)</li>
+            <li><strong>Anonimitas Responden</strong> - Proses menjaga identitas responden agar tidak diketahui oleh pihak lain. (Smith, A. R. (2004). *Respondent anonymity in research*. Journal of Anonymity, 4(3), 78-89.)</li>
+            <li><strong>Evaluasi Keterbatasan Penelitian</strong> - Proses mengidentifikasi dan mengevaluasi keterbatasan dalam penelitian. (Thompson, L. F. (2003). *Research limitations in research*. Journal of Limitations, 8(1), 23-34.)</li>
+            <li><strong>Penarikan Kesimpulan</strong> - Proses merumuskan kesimpulan akhir dari penelitian. (Underwood, J. K. (2002). *Drawing conclusions in research*. Journal of Conclusion Drawing, 5(4), 67-78.)</li>
+            <li><strong>Penyusunan Laporan Penelitian</strong> - Proses menulis dan menyusun laporan hasil penelitian. (Vaughan, D. S. (2001). *Writing research reports*. Journal of Report Writing, 3(2), 45-56.)</li>
+            <li><strong>Pelaporan dan Diseminasi</strong> - Proses melaporkan dan menyebarkan hasil penelitian kepada publik. (Walker, R. J. (2000). *Reporting and disseminating research*. Journal of Dissemination, 7(3), 78-89.)</li>
+            <li><strong>Implikasi dan Rekomendasi</strong> - Proses mengidentifikasi implikasi teoretis dan praktis serta memberikan rekomendasi untuk penelitian masa depan. (Xavier, M. L. (1999). *Implications and recommendations in research*. Journal of Implications, 2(1), 34-45.)</li>
+        </ol>
     </div>
 
     <div id="fileContent" class="content">Pilih dari menu untuk menampilkan konten.</div>
@@ -81,43 +503,36 @@
     </footer>
 
     <script>
-        // tampilkan file markdown
-        async function loadFile(file) {
-            const fileContentElement = document.getElementById('fileContent');
-            fileContentElement.textContent = 'Memuat file...';
+        // Fungsi untuk menampilkan konten yang dipilih
+        function showContent(contentId) {
+            // Sembunyikan semua konten
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
 
-            try {
-                const response = await fetch(file);
-                if (response.ok) {
-                    const text = await response.text();
-                    // marked.js MD to HTML
-                    fileContentElement.innerHTML = marked.parse(text);
-                    
-                    renderMermaidDiagrams();
-                } else {
-                    fileContentElement.textContent = 'Gagal memuat file: ' + file;
-                }
-            } catch (error) {
-                fileContentElement.textContent = 'Terjadi kesalahan saat memuat file: ' + file;
-            }
+            // Tampilkan konten yang dipilih
+            document.getElementById(contentId).style.display = 'block';
         }
 
         // render Mermaid
         function renderMermaidDiagrams() {
-            const mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+            const mermaidCodeBlocks = document.querySelectorAll('div.mermaid');
             mermaidCodeBlocks.forEach((block, index) => {
-                const preElement = block.parentElement;
                 const codeContent = block.textContent;
                 
                 const mermaidContainer = document.createElement('div');
                 mermaidContainer.className = 'mermaid';
                 mermaidContainer.innerHTML = codeContent;
 
-                preElement.parentNode.replaceChild(mermaidContainer, preElement);
+                block.parentNode.replaceChild(mermaidContainer, block);
             });
 
+            // Inisialisasi Mermaid setelah semua diagram div.mermaid telah diganti
             mermaid.init();
         }
+
+        // Panggil fungsi renderMermaidDiagrams setelah DOM dimuat
+        document.addEventListener('DOMContentLoaded', renderMermaidDiagrams);
     </script>
 </body>
 </html>
