@@ -25,7 +25,6 @@ Setiap metode disajikan dalam file Markdown terpisah, dilengkapi dengan diagram 
 - `LICENSE`
 - `CODE_OF_CONDUCT.md`
 - `README.md`
-- `index.html`
 
 ## Cara Berkontribusi
 
