@@ -11,9 +11,9 @@ Selamat datang di repositori Peta Alur dan Glosarium Metode Penelitian! Proyek i
 
 Repositori ini berisi peta alur dan glosarium untuk tiga jenis utama metode penelitian:
 
-1. Metode Penelitian Non-Empiris
-2. Metode Penelitian Empiris Kuantitatif
-3. Metode Penelitian Empiris Kualitatif
+1. [Metode Penelitian Non-Empiris](metode-penelitian-non-empiris.md)
+2. [Metode Penelitian Empiris Kuantitatif](metode-penelitian-empiris-kuantitatif.md)
+3. [Metode Penelitian Empiris Kualitatif](metode-penelitian-empiris-kualitatif.md)
 
 Setiap metode disajikan dalam file Markdown terpisah, dilengkapi dengan diagram alur dan glosarium istilah terkait.
 
